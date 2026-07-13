@@ -8,12 +8,15 @@ int main() {
     int t; cin >> t;
 
     while(t--) {
-        string s; cin >> s;
-        int ans = 0;
+        int n, ans = -1; cin >> n;
+        vector<int> freq(n + 1, 0);
 
-        for (char a : s) {
-            if (isalnum(a))
-                ans += a - '0';
+        while (n--) {
+            int x; cin >> x;
+            freq[x]++;
+
+            if (freq[x] >= 3)
+                ans = x;
         }
 
         cout << ans << '\n';
