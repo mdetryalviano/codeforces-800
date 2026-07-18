@@ -9,16 +9,7 @@ int main() {
     
     int n; cin >> n;
 
-    ll res = pow(5, n);
-
-    string s = to_string(res);
-    
-    if (s.length() <= 2) {
-        cout << s;
-    } else {
-        string ans = s.substr(s.length() - 3, 2);
-        cout << ans;
-    }
+    cout << 25;
     
     return 0;
 }

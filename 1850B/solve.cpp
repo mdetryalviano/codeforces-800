@@ -9,25 +9,24 @@ int main() {
 
     while(t--) {
         int n; cin >> n;
-        vector<int> a(n), b(n);
+        vector<int> a(n + 1, 0);
+        
+        int m = 0, ans = 0;
 
-        for (int i = 0; i < n; i++) {
-            cin >> a[i] >> b[i];
-        }
+        for (int i = 1; i <= n; i++) {
+            int x, y; cin >> x >> y;
 
-        int ans = 0;
-
-        for (int i = 1; i < n; i++) {
-            if (a[i] > 10) {
-                i++;
+            if (x > 10) {
+                continue;
             } else {
-                if (b[i] > b[i - 1]) {
+                if (y > m) {
+                    m = y;
                     ans = i;
                 }
             }
         }
-        
-        cout << ans + 1 << '\n';
+
+        cout << ans << '\n';
     }
     
     return 0;
