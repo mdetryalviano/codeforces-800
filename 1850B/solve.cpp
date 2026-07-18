@@ -9,7 +9,6 @@ int main() {
 
     while(t--) {
         int n; cin >> n;
-        vector<int> a(n + 1, 0);
         
         int m = 0, ans = 0;
 
